@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
+import { WeatherForecast } from './../../definitions/weather-forecast';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { environment } from './../../../environments/environment';
-import { NflTeam } from './../../definitions/nfl-team';
 
 @Injectable()
-export class NflTeamsService {
-  private apiUrl = environment.ffn.nflTeamsApi + environment.ffn.apiKey;
+export class WeatherForecastService {
+  private apiUrl = environment.ffn.weatherForcastApi + environment.ffn.apiKey;
 
   constructor(private _http_: Http) {
   }
 
-  getNflTeams(): Observable<NflTeam[]> {
+  getWeatherForecast(): Observable<WeatherForecast> {
     return this._http_.get(this.apiUrl)
-      .map((res: Response) => <NflTeam[]> res.json())
+      .map((res: Response) => <WeatherForecast> res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server Error'));
   }
+
 }

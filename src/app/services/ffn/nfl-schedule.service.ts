@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { environment } from './../../../environments/environment';
-import { NflTeam } from './../../definitions/nfl-team';
+import { NflSchedule } from './../../definitions/nfl-schedule';
 
 @Injectable()
-export class NflTeamsService {
-  private apiUrl = environment.ffn.nflTeamsApi + environment.ffn.apiKey;
+export class NflScheduleService {
+  private apiUrl = environment.ffn.nflScheduleApi + environment.ffn.apiKey;
 
   constructor(private _http_: Http) {
   }
 
-  getNflTeams(): Observable<NflTeam[]> {
+  getNflSchedule(): Observable<NflSchedule> {
     return this._http_.get(this.apiUrl)
-      .map((res: Response) => <NflTeam[]> res.json())
+      .map((res: Response) => <NflSchedule> res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server Error'));
   }
 }

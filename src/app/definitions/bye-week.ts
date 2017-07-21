@@ -1,4 +1,8 @@
-export class ByeWeek {
+export class ByeWeekResponse {
+    ByeWeek: ByeWeek[];
+}
+
+class ByeWeek {
     byeWeekTeams: ByeWeekTeam[];
 }
 

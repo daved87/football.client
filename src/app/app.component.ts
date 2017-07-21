@@ -13,7 +13,6 @@ export class AppComponent implements OnInit {
   teams: NflTeam[];
   private nflTeamsService: NflTeamsService;
 
-
   constructor(private _nflTeamsService_: NflTeamsService) {
     this.nflTeamsService = _nflTeamsService_;
   }
@@ -25,9 +24,10 @@ export class AppComponent implements OnInit {
   loadTeams() {
     this.nflTeamsService.getNflTeams()
       .subscribe(
-        teams => this.teams = teams,
+        teams => {this.teams = teams['NFLTeams']; console.log(this.teams)},
         err => { console.log(err) }
       )
+
   }
 
 

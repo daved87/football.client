@@ -12,12 +12,7 @@ export class NflTeamsService {
   }
 
   getNflTeams(): Observable<NflTeam[]> {
-    const headers: Headers = new Headers();
-    headers.append('Access-Control-Allow-Origin', '*');
-    headers.append('Access-Control-Allow-Methods', 'GET');
-    headers.append('Access-Control-Allow-Headers', 'json');
-
-    return this._http_.get(this.apiUrl, {headers: headers})
+    return this._http_.get(this.apiUrl)
       .map((res: Response) => <NflTeam[]> res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server Error'));
   }

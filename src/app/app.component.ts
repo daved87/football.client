@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.loadTeams();
   }
+  
 
   loadTeams() {
     this.nflTeamsService.getNflTeams()

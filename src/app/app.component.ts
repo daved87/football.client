@@ -20,15 +20,23 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.loadTeams();
   }
-  
+
 
   loadTeams() {
     this.nflTeamsService.getNflTeams()
       .subscribe(
-        teams => {this.teams = teams['NFLTeams']; console.log(this.teams)},
+        teams => {
+          this.teams = teams['NFLTeams'];
+          console.log(this.teams)
+        },
         err => { console.log(err) }
       )
 
+  }
+
+  onItemDrop(e: any) {
+      // Get the dropped data here
+      this.teams.push(e.dragData);
   }
 
 

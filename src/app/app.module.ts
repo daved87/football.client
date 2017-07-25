@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http'
 import { Ng2DragDropModule } from 'ng2-drag-drop';
 import { PlayerDetailComponent } from './players/player-detail/player-detail.component';
 import { PlayersComponent } from './players/players.component';
+import { AppRoutingModule } from '../Routes';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PlayersComponent } from './players/players.component';
     BrowserModule,
     HttpModule,
     NgbModule.forRoot(),
-    Ng2DragDropModule.forRoot()
+    Ng2DragDropModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

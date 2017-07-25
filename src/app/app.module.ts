@@ -5,11 +5,15 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { HttpModule } from '@angular/http'
 import { Ng2DragDropModule } from 'ng2-drag-drop';
+import { PlayerDetailComponent } from './players/player-detail/player-detail.component';
+import { PlayersComponent } from './players/players.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    PlayerDetailComponent,
+    PlayersComponent
   ],
   imports: [
     BrowserModule,

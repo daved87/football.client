@@ -1,14 +1,2 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col">
-      <app-nav></app-nav>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-        <ul class="list-group">
-            <li (onDrop)="onItemDrop($event)" droppable draggable *ngFor="let team of teams" [dragData]="team" class="list-group-item">{{team.shortName}}</li>
-        </ul>
-    </div>
-  </div>
-</div>
+<app-nav></app-nav>
+<router-outlet></router-outlet>

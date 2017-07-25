@@ -39,6 +39,4 @@ export class AppComponent implements OnInit {
       this.teams.push(e.dragData);
   }
 
-
-
 }

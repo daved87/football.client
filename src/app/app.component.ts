@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loadTeams();
+    // this.loadTeams();
   }
 
 

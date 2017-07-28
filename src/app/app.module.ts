@@ -8,13 +8,19 @@ import { Ng2DragDropModule } from 'ng2-drag-drop';
 import { PlayerDetailComponent } from './players/player-detail/player-detail.component';
 import { PlayersComponent } from './players/players.component';
 import { AppRoutingModule } from '../Routes';
+import { CreateLeagueComponent } from './league/create-league/create-league.component';
+import { LeagueSettingsComponent } from './league/league-settings/league-settings.component';
+import { LeagueComponent } from './league/league.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     PlayerDetailComponent,
-    PlayersComponent
+    PlayersComponent,
+    CreateLeagueComponent,
+    LeagueSettingsComponent,
+    LeagueComponent
   ],
   imports: [
     BrowserModule,
